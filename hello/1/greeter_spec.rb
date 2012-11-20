@@ -1,5 +1,5 @@
 describe "Rspec Greeter" do
-  if "should sa 'Hello Rspec' when it receives the greet() message" do
+  it "should sa Hello Rspec when it receives the greet() message" do
     greeter = RspecGreeter.new
     greeting = greeter.greet
     greeting.should == "Hello RSpec!"
