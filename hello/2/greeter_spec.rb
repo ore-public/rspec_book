@@ -1,4 +1,4 @@
-class RSpecGreeter
+class RspecGreeter
   def greet
     "Hello RSpec!"
   end
