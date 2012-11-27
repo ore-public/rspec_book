@@ -3,7 +3,7 @@ module Codebreaker
     def initialize(output)
 
     end
-    
+
     def start
 
     end
