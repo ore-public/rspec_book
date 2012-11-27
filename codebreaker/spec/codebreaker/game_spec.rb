@@ -8,7 +8,6 @@ module Codebreaker
         game = Game.new(output)
 
         output.should_receive(:puts).with('Welcome to Codebreaker!')
-
         game.start
       end
       it "prompts for the first guess"
