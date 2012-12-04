@@ -11,13 +11,13 @@ module Codebreaker
     end
 
     def guess(guess)
-      marker = Marker.new(@secret)
+      marker = Marker.new(@secret, guess)
       @output.puts '+' * marker.exact_match_count(guess) + '-' * marker.number_match_count(guess)
     end
 
     class Marker
-      def initialize(secret)
-        @secret = secret
+      def initialize(secret, guess)
+        @secret, @guess = secret, guess
       end
 
       def number_match_count(guess)
