@@ -5,15 +5,12 @@ class Marker
 
   def number_match_count
     total_match_count - exact_match_count
-    (0..3).inject(0) do |count, index|
-      count + (number_match?(index) ? 1 : 0)
-    end
   end
 
   def total_match_count
     count = 0
     secret = @secret.split('')
-    @guess.split('').map do |n|
+    @guess.split('').each do |n|
       if secret.include?(n)
         secret.delete_at(secret.index(n))
         count += 1
